@@ -1,0 +1,14 @@
+.form{
+     background-image: url(ice2.jpg);
+     background-color: aqua;
+     width: 400px;
+     margin: 50px auto;
+     padding: 50px;
+     border-radius: 150px;
+     border-style:solid 
+}
+
+#head{
+    color:rgb(255, 6, 201);
+    text-align: center;
+}
