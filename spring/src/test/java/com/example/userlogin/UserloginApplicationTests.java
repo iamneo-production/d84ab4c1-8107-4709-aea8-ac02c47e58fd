@@ -1,10 +1,10 @@
-package net.javaguides.springboot;
+package com.example.userlogin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootBackendApplicationTests {
+class UserloginApplicationTests {
 
 	@Test
 	void contextLoads() {
