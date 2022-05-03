@@ -14,7 +14,7 @@ export default function View() {
   console.log(review);
   const navigate = useNavigate();
   const HandleDelete = (reviewId) => {
-    axios.delete(`http://localhost:8080/deleteReview/${reviewId}`).then(() => {
+    axios.delete(`http://localhost:8080/review/deleteReview/${reviewId}`).then(() => {
       toast.success("Deleted Successfully", {
         position: "top-right",
         autoClose: 3000,
@@ -33,7 +33,7 @@ export default function View() {
 
   const HandleEdit = (reviewId, item) => {
     axios
-      .put(`http://localhost:8080/editReview/${reviewId}`, item)
+      .put(`http://localhost:8080/review/editReview/${reviewId}`, item)
       .then(function (response) {
         console.log(item);
 
@@ -41,7 +41,7 @@ export default function View() {
       });
   };
   React.useEffect(() => {
-    axios.get("http://localhost:8080/Review").then((response) => {
+    axios.get("http://localhost:8080/review/Review").then((response) => {
       setReview(response.data);
 
       // console.log(response.data);

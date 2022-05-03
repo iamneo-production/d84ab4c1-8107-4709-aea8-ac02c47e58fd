@@ -61,7 +61,7 @@ export default function AddReview() {
       });
       const review = { reviewId, userName, rating, quality, userReview };
       axios
-        .post("http://localhost:8080/addReview", review)
+        .post("http://localhost:8080/review/addReview", review)
         .then(function (response) {
           setTimeout(() => {
             navigate("/view");

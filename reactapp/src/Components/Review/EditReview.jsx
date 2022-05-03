@@ -58,7 +58,7 @@ export default function EditReview() {
     if (field1 !== "" && field2 !== "") {
       const review = { reviewId, userName, rating, quality, userReview };
       axios
-        .post("http://localhost:8080/addReview", review)
+        .post("http://localhost:8080/review/addReview", review)
         .then(function (response) {
           toast.success("Updated Successfully", {
             position: "top-right",
