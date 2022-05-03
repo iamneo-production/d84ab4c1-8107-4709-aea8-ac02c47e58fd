@@ -14,6 +14,9 @@ import MyOrder from './MyOrder';
 import AdminReview from './AdminReview';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AddReview from "./Review/AddReview";
+import EditReview from "./Review/EditReview";
+import View from "./Review/view";
 toast.configure()
 export default function NavbarComp () {
   const [orgcartItems, setOrgcartItems] = useState([]);
@@ -100,7 +103,10 @@ export default function NavbarComp () {
           <Route path="/Home" element={<HomePage handleAddProduct={handleAddProduct}/>}/>
           <Route path="/Cart" element={< Cart  cartItems={cartItems} setCartItems={setCartItems} onAdd={onAdd}
           onRemove={onRemove}/>}/>
-          <Route path="Review" element={<AdminReview/>}/>
+          {/* <Route path="Review" element={<AdminReview/>}/> */}
+          <Route path="/review" element={<AddReview />}></Route>
+      <Route path="/editreview" element={<EditReview />}></Route>
+      <Route path="/view" element={<View />}></Route>
         </Routes>
       </div>
       </Router>
