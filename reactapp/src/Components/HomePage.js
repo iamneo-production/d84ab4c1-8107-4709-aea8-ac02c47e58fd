@@ -21,6 +21,7 @@ export default function HomePage( {handleAddProduct}){
       <div className='PCard'>
         
         {products.map((item) =>{
+          if(item.quantity>0){
           return(
          <div className="card" style={{ width:"18rem",padding:"30px"}}>
          <img src={item.imageUrl} className="card-img-top" style={{ width: 230, height: 230, borderRadius: "6px" }}/>
@@ -31,7 +32,7 @@ export default function HomePage( {handleAddProduct}){
     <button className="btn-addtocart" onClick={()=>handleAddProduct(item)}>Add to cart</button>
         
   </div>
-</div>)
+</div>)}
           }
  )}
       </div></>
