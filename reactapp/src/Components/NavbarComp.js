@@ -1,4 +1,4 @@
-import React, {  useState} from 'react'
+import React, {  useState,useEffect } from 'react'
 import {Navbar,Nav,Button,Container} from 'react-bootstrap'
 import {
 	BrowserRouter as Router,
@@ -17,10 +17,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddReview from "./Review/AddReview";
 import EditReview from "./Review/EditReview";
 import View from "./Review/view";
+import  axios  from 'axios';
 toast.configure()
 export default function NavbarComp () {
   const [orgcartItems, setOrgcartItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [itm, setItm] = useState(0);
   const handleAddProduct =(product)=>{
     const exist = cartItems.find((x) => x.productId === product.productId);
     if(exist){
@@ -36,6 +38,11 @@ export default function NavbarComp () {
   const onAdd = (product) => {
     
     const exist = cartItems.find((x) => x.productId === product.productId);
+    // useEffect(() => {
+    //   axios.get('http://localhost:8080/products/admin/findProduct/${product.productId}').then((response) => {
+    //     setItm(response.data);
+    //   });
+    // }, []);
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
