@@ -60,7 +60,7 @@ export default function View() {
             height: 400,
             padding: 5,
             marginTop: 150,
-            marginLeft: 650,
+            marginLeft: 450,
             boxShadow:
               "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
           }}
